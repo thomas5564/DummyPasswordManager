@@ -16,7 +16,7 @@ if [ "$EUID" -ne 0 ]; then
   exec sudo "$0" "$@"
 fi
 
-name='pw.csv'
+name='secret.csv'
 declare -A dict
 
 function scan(){

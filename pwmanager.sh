@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# WARNING:
+# This script stores passwords in a plain text CSV file.
+# It is strongly advised to NOT use this script in its current form for sensitive information.
+# If you intend to use this for password storage, consider:
+# 1. Encrypting the CSV file (e.g., using GPG or another encryption tool).
+# 2. Running this script without root privileges to reduce potential security risks.
+# 3. Ensuring that file permissions are restricted (e.g., `chmod 600 pw.csv`).
+# 4. Avoid displaying or logging sensitive information like passwords directly in the terminal.
+# 
+# USE THIS SCRIPT AT YOUR OWN RISK.
+
 if [ "$EUID" -ne 0 ]; then
   echo "This script must be run as root. Please enter your password."
   exec sudo "$0" "$@"

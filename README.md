@@ -10,20 +10,11 @@ Running the script as root exposes the system to potential command injection and
 3.Insecure Input Handling:
 Lack of input sanitization makes the script vulnerable to injection attacks or data corruption. 
 
-5. Password Display in Terminal:
-Sensitive information like passwords is displayed in plaintext, risking exposure through shoulder-surfing or terminal logs.
-
-6. Hardcoded File Path:
+4. Hardcoded File Path:
 Predictable file location allows attackers to target it directly for credential theft.
 
-7. Race Conditions:
- Multiple script instances can lead to data corruption if they access the file simultaneously.
-
-8. No Authentication:
- Anyone running the script can view all stored passwords without needing to authenticate.
-
-9. Potential Path Traversal:
+5. Potential Path Traversal:
    The file path isn’t validated, opening the possibility for manipulation or overwriting critical files.
 
-10. Lack of Error Handling: 
+6. Lack of Error Handling: 
     No checks for file read/write failures, leading to potential data loss or script malfunction
